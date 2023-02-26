@@ -1,5 +1,3 @@
-vim.api.nvim_exec('language en_US', true)
-
 local set = vim.opt
 set.number = true
 set.numberwidth = 5
