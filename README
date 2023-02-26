@@ -1,0 +1,16 @@
+requires:
+
+* installed nvim (https://neovim.io/)
+* nord theme for your terminal of choice (https://www.nordtheme.com/)
+* one of the nerd fonts as your terminal font (https://www.nerdfonts.com/)
+
+clone this repo:
+
+ git clone git@github.com:mbrndtgn/nvim-config.git ~/.config/nvim
+
+install packer (https://github.com/wbthomason/packer.nvim):
+
+ git clone --depth 1 https://github.com/wbthomason/packer.nvim \
+    ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+start neovim and run :PackerSync
