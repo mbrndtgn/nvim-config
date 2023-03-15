@@ -4,6 +4,7 @@ return require('packer').startup(function(use)
   use 'gpanders/nvim-parinfer'
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-lua/plenary.nvim'
+  use 'ojroques/nvim-osc52'
   use { 'nvim-tree/nvim-tree.lua', requires = 'nvim-web-devicons' }
   use { 'romgrk/barbar.nvim', requires = 'nvim-web-devicons' }
   use { 'nvim-lualine/lualine.nvim', requires = 'nvim-web-devicons' }
