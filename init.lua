@@ -9,6 +9,8 @@ set.softtabstop = 2
 set.expandtab = true
 set.autoindent = true
 
+vim.g.mapleader = ','
+
 require('plugins')
 
 -- nord theme
