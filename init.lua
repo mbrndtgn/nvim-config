@@ -10,12 +10,26 @@ set.expandtab = true
 set.autoindent = true
 
 vim.g.mapleader = ','
+vim.g.iced_enable_default_key_mappings = true
 
 require('plugins')
 
 -- nord theme
 vim.g.nord_italic = false
 require('nord').set()
+
+-- rainbow
+vim.g.rainbow_active = true
+vim.cmd[[
+let g:rainbow_conf = {
+\  'guifgs': ['firebrick1', 'salmon1', 'yellow', 'green1', 'cyan3', 'dodgerblue1', 'mediumorchid'],
+\  'separately': {
+\    '*': 0,
+\    'scheme': {'guifgs': ['firebrick1', 'salmon1', 'yellow', 'green1', 'cyan3', 'dodgerblue1', 'mediumorchid']},
+\    'clojure': {'guifgs': ['orchid4', 'salmon4', 'yellow4', 'green4', 'cadetblue4', 'cornflowerblue', 'mediumorchid3']},
+\  }
+\}
+]]
 
 -- neogit
 require('neogit').setup()
@@ -24,7 +38,7 @@ require('neogit').setup()
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 set.termguicolors = true
-vim.api.nvim_set_keymap('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>o', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 require('nvim-tree').setup()
 
 -- nvim-lualine
