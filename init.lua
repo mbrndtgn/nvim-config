@@ -22,10 +22,10 @@ require('nord').set()
 vim.g.rainbow_active = true
 vim.cmd[[
 let g:rainbow_conf = {
-\  'guifgs': ['firebrick1', 'salmon1', 'yellow', 'green1', 'cyan3', 'dodgerblue1', 'mediumorchid'],
+\  'guifgs': ['orchid4', 'salmon4', 'yellow4', 'green4', 'cadetblue4', 'cornflowerblue', 'mediumorchid3'],
 \  'separately': {
 \    '*': 0,
-\    'scheme': {'guifgs': ['firebrick1', 'salmon1', 'yellow', 'green1', 'cyan3', 'dodgerblue1', 'mediumorchid']},
+\    'scheme': {'guifgs': ['orchid4', 'salmon4', 'yellow4', 'green4', 'cadetblue4', 'cornflowerblue', 'mediumorchid3']},
 \    'clojure': {'guifgs': ['orchid4', 'salmon4', 'yellow4', 'green4', 'cadetblue4', 'cornflowerblue', 'mediumorchid3']},
 \  }
 \}
