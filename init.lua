@@ -11,6 +11,7 @@ set.autoindent = true
 
 vim.g.mapleader = ','
 vim.g.iced_enable_default_key_mappings = true
+vim.api.nvim_set_keymap('n', '<leader>i', ':IcedConnect<CR>', { noremap = true, silent = true })
 
 require('plugins')
 
