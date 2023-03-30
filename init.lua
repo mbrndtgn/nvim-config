@@ -9,28 +9,23 @@ set.softtabstop = 2
 set.expandtab = true
 set.autoindent = true
 
-vim.g.mapleader = ','
-vim.g.iced_enable_default_key_mappings = true
-vim.api.nvim_set_keymap('n', '<leader>i', ':IcedConnect<CR>', { noremap = true, silent = true })
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ','
 
 require('plugins')
 
--- nord theme
-vim.g.nord_italic = false
-require('nord').set()
+-- rose-pine
+require('rose-pine').setup({
+  --- @usage 'auto'|'main'|'moon'|'dawn'
+  variant = 'auto',
+  dark_variant = 'moon',
+})
+vim.cmd('colorscheme rose-pine')
 
--- rainbow
-vim.g.rainbow_active = true
-vim.cmd[[
-let g:rainbow_conf = {
-\  'guifgs': ['orchid4', 'salmon4', 'yellow4', 'green4', 'cadetblue4', 'cornflowerblue', 'mediumorchid3'],
-\  'separately': {
-\    '*': 0,
-\    'scheme': {'guifgs': ['orchid4', 'salmon4', 'yellow4', 'green4', 'cadetblue4', 'cornflowerblue', 'mediumorchid3']},
-\    'clojure': {'guifgs': ['orchid4', 'salmon4', 'yellow4', 'green4', 'cadetblue4', 'cornflowerblue', 'mediumorchid3']},
-\  }
-\}
-]]
+-- nvim-treesitter
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = { 'clojure', 'cmake', 'commonlisp', 'css', 'diff', 'dockerfile', 'fennel', 'go',  'gomod',  'gosum',  'html',  'javascript',  'json',  'lua',  'make',  'markdown',  'passwd',  'python',  'racket',  'regex',  'ruby',  'scheme',  'sql',  'toml',  'vim',  'yaml'  },
+}
 
 -- neogit
 require('neogit').setup()
@@ -45,6 +40,7 @@ require('nvim-tree').setup()
 -- nvim-lualine
 require('lualine').setup {
   options = {
+    theme = 'auto',
     icons_enabled = false,
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
@@ -52,7 +48,7 @@ require('lualine').setup {
 }
 
 -- barbar.nvim
-require('bufferline').setup {
+require'bufferline'.setup {
   auto_hide = true,
 }
 
