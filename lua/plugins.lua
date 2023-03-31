@@ -2,6 +2,7 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'nvim-treesitter/nvim-treesitter'  -- run :TSUpdate when updating
   use 'gpanders/nvim-parinfer'
+  use 'm4xshen/autoclose.nvim'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'Olical/conjure'
   use 'nvim-tree/nvim-web-devicons'

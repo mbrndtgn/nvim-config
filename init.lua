@@ -14,6 +14,13 @@ vim.g.maplocalleader = ','
 
 require('plugins')
 
+-- autoclose
+require("autoclose").setup({
+   options = {
+      disabled_filetypes = {'clojure', 'scheme', 'lisp', 'racket', 'hy', 'fennel', 'janet', 'carp', 'wast', 'yuck'},
+   },
+})
+
 -- rose-pine
 require('rose-pine').setup({
   --- @usage 'auto'|'main'|'moon'|'dawn'

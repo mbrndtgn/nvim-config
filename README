@@ -1,7 +1,7 @@
 requires:
 
 * installed nvim (https://neovim.io/)
-* nord theme for your terminal of choice (https://www.nordtheme.com/)
+* rose pine theme for your terminal of choice (https://rosepinetheme.com/)
 * one of the nerd fonts as your terminal font (https://www.nerdfonts.com/)
 
 clone this repo:
