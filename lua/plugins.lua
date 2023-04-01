@@ -8,6 +8,9 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-lua/plenary.nvim'
   use 'ojroques/nvim-osc52'
+  use 'tpope/vim-dispatch'
+  use 'radenling/vim-dispatch-neovim'
+  use { 'clojure-vim/vim-jack-in', requires = 'vim-dispatch-neovim'}
   use { 'nvim-tree/nvim-tree.lua', requires = 'nvim-web-devicons' }
   use { 'uloco/bluloco.nvim', requires = 'rktjmp/lush.nvim' }
   use { 'rose-pine/neovim', as = 'rose-pine' }
