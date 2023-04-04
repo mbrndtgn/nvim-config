@@ -10,6 +10,27 @@ return require('packer').startup(function(use)
   use 'ojroques/nvim-osc52'
   use 'tpope/vim-dispatch'
   use 'radenling/vim-dispatch-neovim'
+  use {
+    'VonHeikemen/lsp-zero.nvim',
+    branch = 'v2.x',
+    requires = {
+      -- LSP Support
+      {'neovim/nvim-lspconfig'},             -- Required
+      {                                      -- Optional
+        'williamboman/mason.nvim',
+        run = function()
+          pcall(vim.cmd, 'MasonUpdate')
+        end,
+      },
+      {'williamboman/mason-lspconfig.nvim'}, -- Optional
+
+      -- Autocompletion
+      {'hrsh7th/nvim-cmp'},     -- Required
+      {'hrsh7th/cmp-nvim-lsp'},  -- Required
+      {'L3MON4D3/LuaSnip'},      -- Required
+      {'PaterJason/cmp-conjure'} -- conjure
+    }
+  }
   use { 'clojure-vim/vim-jack-in', requires = 'vim-dispatch-neovim'}
   use { 'nvim-tree/nvim-tree.lua', requires = 'nvim-web-devicons' }
   use { 'uloco/bluloco.nvim', requires = 'rktjmp/lush.nvim' }
