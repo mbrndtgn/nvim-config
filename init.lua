@@ -8,6 +8,7 @@ set.shiftwidth = 2
 set.softtabstop = 2
 set.expandtab = true
 set.autoindent = true
+set.splitright = true
 
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ','
