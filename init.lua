@@ -18,9 +18,9 @@ require('plugins')
 
 -- autoclose
 require("autoclose").setup({
-   options = {
-      disabled_filetypes = {'clojure', 'scheme', 'lisp', 'racket', 'hy', 'fennel', 'janet', 'carp', 'wast', 'yuck'},
-   },
+  options = {
+    disabled_filetypes = { 'clojure', 'scheme', 'lisp', 'racket', 'hy', 'fennel', 'janet', 'carp', 'wast', 'yuck' },
+  },
 })
 
 -- rose-pine
@@ -32,14 +32,16 @@ require('rose-pine').setup({
 vim.cmd('colorscheme rose-pine')
 
 -- nvim-treesitter
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = { 'clojure', 'cmake', 'commonlisp', 'css', 'diff', 'dockerfile', 'fennel', 'go',  'gomod',  'gosum',  'html',  'javascript',  'json',  'lua',  'make',  'markdown',  'passwd',  'python',  'racket',  'regex',  'ruby',  'scheme',  'sql',  'toml',  'vim',  'yaml' },
+require 'nvim-treesitter.configs'.setup {
+  ensure_installed = { 'clojure', 'cmake', 'commonlisp', 'css', 'diff', 'dockerfile', 'fennel', 'go', 'gomod', 'gosum',
+    'html', 'javascript', 'json', 'lua', 'make', 'markdown', 'passwd', 'python', 'racket', 'regex', 'ruby', 'scheme',
+    'sql', 'toml', 'vim', 'yaml' },
 }
 
 -- lsp-zero
 local lsp = require('lsp-zero').preset({})
 lsp.on_attach(function(client, bufnr)
-  lsp.default_keymaps({buffer = bufnr})
+  lsp.default_keymaps({ buffer = bufnr })
 end)
 lsp.setup()
 lsp.default_keymaps({
@@ -48,7 +50,7 @@ lsp.default_keymaps({
 })
 
 -- nvim-cmp
-local cmp = require'cmp'
+local cmp = require 'cmp'
 cmp.setup {
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
@@ -88,13 +90,13 @@ require('lualine').setup {
   options = {
     theme = 'auto',
     icons_enabled = false,
-    component_separators = { left = '', right = ''},
-    section_separators = { left = '', right = ''},
+    component_separators = { left = '', right = '' },
+    section_separators = { left = '', right = '' },
   }
 }
 
 -- barbar.nvim
-require'bufferline'.setup {
+require 'bufferline'.setup {
   auto_hide = true,
 }
 
@@ -103,7 +105,7 @@ vim.keymap.set('n', '<leader>c', require('osc52').copy_operator, { expr = true }
 vim.keymap.set('n', '<leader>cc', '<leader>c_', { remap = true })
 vim.keymap.set('v', '<leader>c', require('osc52').copy_visual)
 require('osc52').setup {
-  max_length = 0,      -- Maximum length of selection (0 for no limit)
-  silent     = false,  -- Disable message on successful copy
-  trim       = false,  -- Trim surrounding whitespaces before copy
+  max_length = 0,     -- Maximum length of selection (0 for no limit)
+  silent     = false, -- Disable message on successful copy
+  trim       = false, -- Trim surrounding whitespaces before copy
 }
