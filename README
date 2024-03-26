@@ -1,16 +1,16 @@
 requires:
 
 * installed nvim (https://neovim.io/)
-* rose pine theme for your terminal of choice (https://rosepinetheme.com/)
+* install tokyonight for your terminal of choice (https://github.com/folke/tokyonight.nvim)
 * one of the nerd fonts as your terminal font (https://www.nerdfonts.com/)
 
 clone this repo:
 
- git clone https://github.com/mbrndtgn/nvim-config ~/.config/nvim
+git clone https://github.com/mbrndtgn/nvim-config ~/.config/nvim
 
 install packer (https://github.com/wbthomason/packer.nvim):
 
- git clone --depth 1 https://github.com/wbthomason/packer.nvim \
-    ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+git clone --depth 1 https://github.com/wbthomason/packer.nvim \
+  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 start nvim and run :PackerSync

@@ -33,9 +33,12 @@ return require('packer').startup(function(use)
   }
   use { 'clojure-vim/vim-jack-in', requires = 'vim-dispatch-neovim'}
   use { 'nvim-tree/nvim-tree.lua', requires = 'nvim-web-devicons' }
-  use { 'uloco/bluloco.nvim', requires = 'rktjmp/lush.nvim' }
-  use { 'rose-pine/neovim', as = 'rose-pine' }
-  use { 'romgrk/barbar.nvim', tag = 'v1.5.0', requires = 'nvim-web-devicons' }
+  -- use { 'rose-pine/neovim', as = 'rose-pine' }
+  use { 'folke/tokyonight.nvim' }
   use { 'nvim-lualine/lualine.nvim', requires = 'nvim-web-devicons' }
   use { 'timuntersberger/neogit', requires = 'plenary.nvim' }
+  use {
+    'nvim-telescope/telescope.nvim', branch = '0.1.x',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
 end)
