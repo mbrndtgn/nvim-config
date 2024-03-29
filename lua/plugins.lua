@@ -1,4 +1,8 @@
-return require('packer').startup(function(use)
+local packer = require('packer')
+local util = require("packer.util")
+
+local function pluginspec()
+  local use = use;
   use 'wbthomason/packer.nvim'
   use 'nvim-treesitter/nvim-treesitter'  -- run :TSUpdate when updating
   use 'gpanders/nvim-parinfer'
@@ -41,4 +45,12 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim', branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-end)
+end
+
+packer.startup {
+  pluginspec,
+  config = {
+    snapshot = util.join_paths(vim.fn.stdpath("config"), "packer-snapshot.json"),
+    snapshot_path = vim.fn.stdpath("config"),
+  }
+}
