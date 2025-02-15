@@ -42,7 +42,6 @@ local servers = {
   'clojure_lsp',
   'cssls',
   'html',
-  'pylsp',
   'pyright',
 }
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
